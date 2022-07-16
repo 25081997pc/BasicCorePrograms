@@ -4,23 +4,17 @@
     {
         static void Main(string[] args)
         {
-            int num;
-            Console.WriteLine("Enter the Number : ");
-            num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Dividend : ");
+            int dividend = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Divisor : ");
+            int divisor = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Factors are : ");
+            int Quotient = dividend / divisor;
+            int Remainder = dividend % divisor;
 
-            if(num >= 2)
-            {
-               for(int i = 2; i <= num; i++)
-               {
-                    while(num % i == 0)
-                    {
-                        Console.Write(i + " ");
-                        num = num / i;
-                    }   
-               }
-            }
+            Console.WriteLine("Dividend: {0}, Divisor: {1} ", dividend, divisor);
+            Console.WriteLine("Quotient is : " + Quotient);
+            Console.WriteLine("Remainder is : " + Remainder);
         }
     }
 }
