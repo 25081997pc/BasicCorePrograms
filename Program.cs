@@ -4,19 +4,20 @@
     {
         static void Main(string[] args)
         {
-            int N;
-            Console.WriteLine("Enter the Number : ");
-            N = Convert.ToInt32(Console.ReadLine());
+            int num;
+            double sum = 0;
+            Console.WriteLine("Calculate the Harmonic Series and their sum :\n");
+            Console.WriteLine("-----------------");
 
-            Console.WriteLine("Table of Power of Two : ");
+            Console.WriteLine("Input the Number of terms : ");
+            num = Convert.ToInt32(Console.ReadLine());
 
-            if(N !=0 && N <= 31)
+            for(int i = 1; i <= num; i++)
             {
-                for(int i = 1; i <= N; i++)
-                {
-                    Console.WriteLine("2^{0} : {1}", i , Math.Pow(2,i));
-                }
+                Console.Write(" 1/{0} + ", i);
+                sum += (double)1 / i;
             }
+            Console.WriteLine("\nSum of series upto {0} terms : {1} \n", num, sum);
         }
     }
 }
