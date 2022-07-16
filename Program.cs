@@ -5,19 +5,22 @@
         static void Main(string[] args)
         {
             int num;
-            double sum = 0;
-            Console.WriteLine("Calculate the Harmonic Series and their sum :\n");
-            Console.WriteLine("-----------------");
-
-            Console.WriteLine("Input the Number of terms : ");
+            Console.WriteLine("Enter the Number : ");
             num = Convert.ToInt32(Console.ReadLine());
 
-            for(int i = 1; i <= num; i++)
+            Console.WriteLine("Factors are : ");
+
+            if(num >= 2)
             {
-                Console.Write(" 1/{0} + ", i);
-                sum += (double)1 / i;
+               for(int i = 2; i <= num; i++)
+               {
+                    while(num % i == 0)
+                    {
+                        Console.Write(i + " ");
+                        num = num / i;
+                    }   
+               }
             }
-            Console.WriteLine("\nSum of series upto {0} terms : {1} \n", num, sum);
         }
     }
 }
