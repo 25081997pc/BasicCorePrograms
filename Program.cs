@@ -4,16 +4,17 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the Number : ");
-            int num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter any Character to check whether it is Vowel or Constant : ");
+            char ch = Convert.ToChar(Console.ReadLine());
 
-            if(num % 2 == 0)
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || 
+                ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
             {
-                Console.WriteLine("Number is Even");
+                Console.WriteLine(ch + " is Vowel");
             }
             else
             {
-                Console.WriteLine("Number is Odd");
+                Console.WriteLine(ch + " is Constant");
             }
         }
     }
