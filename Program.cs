@@ -4,19 +4,19 @@
     {
         static void Main(string[] args)
         {
-            int year;
-            Console.WriteLine("Enter the Four Digit Number Year : ");
-            year = Convert.ToInt32(Console.ReadLine());
+            int N;
+            Console.WriteLine("Enter the Number : ");
+            N = Convert.ToInt32(Console.ReadLine());
 
-            if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+            Console.WriteLine("Table of Power of Two : ");
+
+            if(N !=0 && N <= 31)
             {
-                Console.WriteLine("{0} year is Leap Year", year);
+                for(int i = 1; i <= N; i++)
+                {
+                    Console.WriteLine("2^{0} : {1}", i , Math.Pow(2,i));
+                }
             }
-            else
-            {
-                Console.WriteLine("{0} year is not Leap Year", year);
-            }
-            Console.ReadLine();
         }
     }
 }
